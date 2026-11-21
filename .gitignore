@@ -1,0 +1,17 @@
+.venv
+build/
+/game
+src/recomp/gen/
+__pycache__/
+*.pyc
+dist/
+*.exe
+*.dll
+*.pdb
+*.zip
+sh4log.txt
+sh4log.txt.*
+screenshots/
+sh4.ini
+sh4-pc.ini
+mods/

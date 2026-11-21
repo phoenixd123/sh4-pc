@@ -1,0 +1,1 @@
+capstone>=5   # the recompiler disassembler (tools/regen.sh, recomp/x86rec.py)
