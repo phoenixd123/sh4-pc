@@ -11,6 +11,11 @@ emulator: the game's x86 executable is translated to C ahead of time, and that C
 build it on. The Windows API the game expects (Direct3D 8, DirectSound, DirectInput, kernel32, user32) is
 reimplemented on top of SDL2 and OpenGL.
 
+<p align=center><b><a href="https://github.com/phoenixd123/sh4-pc/releases/latest">Download the Windows launcher</a></b>
+(no build needed). It is the launcher only: the game's code is recompiled from your own
+<code>SILENT HILL 4.exe</code>, so the full game is built from your copy, not downloaded — see
+<a href="docs/BUILD-WINDOWS.md">docs/BUILD-WINDOWS.md</a>.</p>
+
 This is a separate project that started from **[sh4vita](https://github.com/vallfrr/sh4vita)** by vallfrr, the
 PlayStation Vita port whose recompiler and runtime are almost everything that makes the game run at all. **Who did
 what is in [CREDITS.md](CREDITS.md)**, and the state of every known problem is in **[BUGS.md](BUGS.md)**.
@@ -69,7 +74,8 @@ has been played through in this fork; see [BUGS.md](BUGS.md).
 
 ### The launcher-only download
 
-`dist/sh4-pc-launcher-0.2.0-win64.zip` is the launcher built from this tree with the generated game code left out.
+The release download, `sh4-pc-launcher-0.2.0-win64.zip`, is the launcher built from this tree with the generated
+game code left out; the same zip is what `tools/build-windows.sh` writes into `dist/`.
 It checks your copy, remembers it, edits `sh4.ini` and installs mods; **Play starts that copy's own
 `SILENT HILL 4.exe`** (the GOG executable), because there is no recompiled code in it. A build made from your own
 copy runs the port instead.
